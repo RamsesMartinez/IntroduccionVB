@@ -25,8 +25,7 @@
     End Function
 
     Private Sub MostrarResultado()
-        mensaje = "El resultado es: " & resultado
-        MsgBox(mensaje, MsgBoxStyle.MsgBoxHelp, "Resultado de la Operación")
+        Txt_Resultado.Text = resultado
     End Sub
 
     Private Sub Btn_Suma_Click(sender As Object, e As EventArgs) Handles Btn_Suma.Click

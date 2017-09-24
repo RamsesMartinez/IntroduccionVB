@@ -32,6 +32,7 @@ Partial Class Fr_Intro
         Me.Btn_Resta = New System.Windows.Forms.Button()
         Me.Btn_Multiplicacion = New System.Windows.Forms.Button()
         Me.Btn_Division = New System.Windows.Forms.Button()
+        Me.Txt_Resultado = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Btn_Hola
@@ -130,11 +131,20 @@ Partial Class Fr_Intro
         Me.Btn_Division.Text = "/"
         Me.Btn_Division.UseVisualStyleBackColor = True
         '
+        'Txt_Resultado
+        '
+        Me.Txt_Resultado.Location = New System.Drawing.Point(233, 289)
+        Me.Txt_Resultado.Name = "Txt_Resultado"
+        Me.Txt_Resultado.ReadOnly = True
+        Me.Txt_Resultado.Size = New System.Drawing.Size(132, 20)
+        Me.Txt_Resultado.TabIndex = 11
+        '
         'Fr_Intro
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(678, 387)
+        Me.Controls.Add(Me.Txt_Resultado)
         Me.Controls.Add(Me.Btn_Division)
         Me.Controls.Add(Me.Btn_Multiplicacion)
         Me.Controls.Add(Me.Btn_Resta)
@@ -162,4 +172,5 @@ Partial Class Fr_Intro
     Friend WithEvents Btn_Resta As Button
     Friend WithEvents Btn_Multiplicacion As Button
     Friend WithEvents Btn_Division As Button
+    Friend WithEvents Txt_Resultado As TextBox
 End Class
