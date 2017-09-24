@@ -33,6 +33,10 @@ Partial Class Fr_Intro
         Me.Btn_Multiplicacion = New System.Windows.Forms.Button()
         Me.Btn_Division = New System.Windows.Forms.Button()
         Me.Txt_Resultado = New System.Windows.Forms.TextBox()
+        Me.Dgv_Datos = New System.Windows.Forms.DataGridView()
+        Me.OperacionC = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ResultadoC = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        CType(Me.Dgv_Datos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Btn_Hola
@@ -139,11 +143,36 @@ Partial Class Fr_Intro
         Me.Txt_Resultado.Size = New System.Drawing.Size(132, 20)
         Me.Txt_Resultado.TabIndex = 11
         '
+        'Dgv_Datos
+        '
+        Me.Dgv_Datos.AllowUserToAddRows = False
+        Me.Dgv_Datos.AllowUserToDeleteRows = False
+        Me.Dgv_Datos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Dgv_Datos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.OperacionC, Me.ResultadoC})
+        Me.Dgv_Datos.Location = New System.Drawing.Point(657, 68)
+        Me.Dgv_Datos.Name = "Dgv_Datos"
+        Me.Dgv_Datos.ReadOnly = True
+        Me.Dgv_Datos.Size = New System.Drawing.Size(497, 257)
+        Me.Dgv_Datos.TabIndex = 12
+        '
+        'OperacionC
+        '
+        Me.OperacionC.HeaderText = "OperacionC"
+        Me.OperacionC.Name = "OperacionC"
+        Me.OperacionC.ReadOnly = True
+        '
+        'ResultadoC
+        '
+        Me.ResultadoC.HeaderText = "ResultadoC"
+        Me.ResultadoC.Name = "ResultadoC"
+        Me.ResultadoC.ReadOnly = True
+        '
         'Fr_Intro
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(678, 387)
+        Me.ClientSize = New System.Drawing.Size(1251, 387)
+        Me.Controls.Add(Me.Dgv_Datos)
         Me.Controls.Add(Me.Txt_Resultado)
         Me.Controls.Add(Me.Btn_Division)
         Me.Controls.Add(Me.Btn_Multiplicacion)
@@ -157,6 +186,7 @@ Partial Class Fr_Intro
         Me.Controls.Add(Me.Btn_Hola)
         Me.Name = "Fr_Intro"
         Me.Text = "Formulario Básico"
+        CType(Me.Dgv_Datos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -173,4 +203,7 @@ Partial Class Fr_Intro
     Friend WithEvents Btn_Multiplicacion As Button
     Friend WithEvents Btn_Division As Button
     Friend WithEvents Txt_Resultado As TextBox
+    Friend WithEvents Dgv_Datos As DataGridView
+    Friend WithEvents OperacionC As DataGridViewTextBoxColumn
+    Friend WithEvents ResultadoC As DataGridViewTextBoxColumn
 End Class
